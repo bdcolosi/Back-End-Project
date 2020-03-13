@@ -1,10 +1,11 @@
 <div class="columns">
     <div class="column"></div>
     <div class="column is-four-fifths has-background-primary">
+        <div class="container">
             
             ${resultData.map (images => {
-            return `<ul><img src=${images.picture}></ul>
-            <button onclick="window.location.href = '/partial-single-img/${images.id}';" class="button is-primary is-inverted has-text-primary">
+            return `<div class="item"><img src=${images.picture}>
+            <button onclick="window.location.href = '/images/${images.id}';" class="button is-primary is-inverted has-text-primary">
                 Open Image
             </button>
             <button onclick="" class="button is-primary is-inverted">
@@ -12,8 +13,10 @@
             </button>
             <button onclick="" class="button is-primary is-inverted">
                 Uploader
-            </button>
+            </button></div>
             `}).join('')}
+            
+        </div>
     </div>
     <div class="column"></div>
 </div>
