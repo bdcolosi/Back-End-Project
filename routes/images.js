@@ -10,7 +10,7 @@ router.get('/', async function(req, res, next) {
     locals: {
       title: 'Film Data',
       resultData: resultData,
-      is_logged_in: req.session.is_logged_in
+      is_logged_in: is_logged_in
     },
     partials: {
       partial: 'partial-index'
@@ -19,33 +19,15 @@ router.get('/', async function(req, res, next) {
 });
 
 router.get("/:picture_id", async function(req, res, next) {
-  const { r_id } = req.params;
-  const data = await PictureReviewModel.getPicturesById(r_id);
-  const reviewList = await PictureReviewModel.getCommentsByImageId(r_id);
+  const { picture_id } = req.params;
+  console.log(picture_id);
+  const data = await imageModel.getPicturesById(picture_id);
 
   res.render("template", {
     locals: {
       title: data[0].name,
       data: data,
-      reviewList: reviewList
-    },
-    partials: {
-      partial: "partial-single-img"
-    }
-  });
-});
-
-
-router.get("/:picture_id", async function(req, res, next) {
-  const { r_id } = req.params;
-  const data = await ImageModel.getPicturesById(r_id);
-  const reviewList = await ImageModel.getCommentsByImageId(r_id);
-
-  res.render("template", {
-    locals: {
-      title: data[0].name,
-      data: data,
-      reviewList: reviewList
+      is_logged_in: req.session.is_logged_in
     },
     partials: {
       partial: "partial-single-img"
