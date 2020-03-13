@@ -1,0 +1,77 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.partialWrapper {
+  margin: 20px 10px 10px 10px;
+  display: grid;
+  grid-template-rows: 300px 100px 600px;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px blue solid; */
+}
+
+.welcomeArea {
+  text-align: center;
+} 
+
+.welcomeArea p {
+  font-size: 1.5em;
+} 
+
+.top {
+  margin-top: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3em;
+}
+
+#profilePicArea {
+align-content: center;
+/* border: red 1px solid; */
+}
+
+.profilePic {
+  margin-left: 10%;
+  border-radius: 310px;
+  height: 150px;
+  width: 150px;
+  
+  }
+
+.photoTable {
+  margin: 10px 30px 30px 30px;
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 7px;
+  /* border: black 1px solid; */
+}
+
+.photoTable img {
+  margin-left: 10%;
+height: 25rem;
+width: 15rem;
+}
+
+.title {
+  grid-column: 1/ span 2;
+  text-align: center;
+  /* font-family: 'Times New Roman', Times, serif; */
+}
+
+.uploadImg {
+  margin-top: 40px;
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+.top5 {
+  margin-left: 10%;
+  border-radius: 9px;
+  height: 150px;
+  width: 150px;
+}

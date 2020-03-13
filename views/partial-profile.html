@@ -1,0 +1,29 @@
+<div class="partialWrapper">
+  <div class="welcomeArea">
+    <h1 class="top">${name}</h1>
+    <p>20 Likes  |  10 Followers</p>
+  </div>
+  <div id="profilePicArea">
+    <img src="${resultData[0].picture}" class="profilePic">
+    <h3>Choose/Change Your Profile Picture</h3>
+    <form action='/profile' method="post" enctype="multipart/form-data">
+      <input type='file' name='image' />
+      <input type="submit" value="upload"/>
+    </form>
+  </div>
+  <div class="title">
+    <h1>${name}'s Top 5 Images</h1>
+  </div>
+  <div class="photoTable">
+    <img src="${savedData[0].picture}" class="top5">
+    <img src="${savedData[1].picture}" class="top5">
+    <img src="${savedData[2].picture}" class="top5">
+    <img src="${savedData[3].picture}" class="top5">
+    <img src="${savedData[4].picture}" class="top5">
+  </div>
+</div>
+
+
+
+
+
