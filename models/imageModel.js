@@ -18,11 +18,12 @@ class PictureReviewModel{
     }
   }
 
-  static async getPicturesById(r_id) {
+  static async getPicturesById(picture_id) {
     try {
       const response = await db.any(
-        `SELECT * FROM images WHERE id = ${user_id};`
+        `SELECT * FROM images WHERE id = ${picture_id};`
       );
+      console.log(response);
       return response;
     } catch (error) {
       console.error("ERROR: ", error);
