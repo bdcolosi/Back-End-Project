@@ -1,14 +1,22 @@
-
-
-<p>
-    ${resultData.map (images => {
-return `<ul><img src=${images.picture}>
-    <a href="/images/${images.id}">click</a>
-</ul>`}).join('')}
-</p>
-
-
-
-
-
-
+<div class="columns">
+    <div class="column"></div>
+    <div class="column is-four-fifths has-background-primary">
+        <div class="container">
+            
+            ${resultData.map (images => {
+            return `<div class="item"><img src=${images.picture}>
+            <button onclick="window.location.href = '/images/${images.id}';" class="button is-primary is-inverted has-text-primary">
+                Open Image
+            </button>
+            <button onclick="" class="button is-primary is-inverted">
+                Like
+            </button>
+            <button onclick="" class="button is-primary is-inverted">
+                Uploader
+            </button></div>
+            `}).join('')}
+            
+        </div>
+    </div>
+    <div class="column"></div>
+</div>
