@@ -7,17 +7,20 @@
             <div class="grid-col grid-col--3"></div>
             <div class="grid-col grid-col--4"></div>
             ${resultData.map (images => {
-            return `<div class="grid-item"><img src=${images.picture}>
-            <button onclick="window.location.href = '/images/${images.id}';" class="button is-primary is-inverted has-text-primary">
-                Open Image
-            </button>
-            <button onclick="" class="button is-primary is-inverted">
-                Like
-            </button>
-            <button onclick="" class="button is-primary is-inverted">
-                Uploader
-            </button>
-            </div>
+            return `<div class="grid-item">
+                        <img class="pinterest" src=${images.picture}>
+                        <div class="overlay">
+                            <button id="open" onclick="window.location.href = '/images/${images.id}';" class="button is-primary is-inverted has-text-primary">
+                            Open Image
+                            </button>
+                            <button id="like" onclick="" class="button is-primary is-inverted">
+                            Like
+                            </button>
+                            <button id="uploader" onclick="" class="button is-primary is-inverted">
+                            Uploader
+                            </button>
+                        </div>
+                    </div>
             `}).join('')}
             
         </div>
