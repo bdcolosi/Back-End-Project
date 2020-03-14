@@ -1,10 +1,13 @@
 <div class="columns">
     <div class="column"></div>
     <div class="column is-four-fifths has-background-primary">
-        <div class="container">
-            
+        <div class="grid" data-colcade="columns: .grid-col, items: .grid-item">
+            <div class="grid-col grid-col--1"></div>
+            <div class="grid-col grid-col--2"></div>
+            <div class="grid-col grid-col--3"></div>
+            <div class="grid-col grid-col--4"></div>
             ${resultData.map (images => {
-            return `<div class="item"><img src=${images.picture}>
+            return `<div class="grid-item"><img src=${images.picture}>
             <button onclick="window.location.href = '/images/${images.id}';" class="button is-primary is-inverted has-text-primary">
                 Open Image
             </button>
@@ -13,15 +16,14 @@
             </button>
             <button onclick="" class="button is-primary is-inverted">
                 Uploader
-            </button></div>
+            </button>
+            </div>
             `}).join('')}
             
         </div>
     </div>
     <div class="column"></div>
 </div>
-
-
 
 
 
