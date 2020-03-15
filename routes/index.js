@@ -19,13 +19,18 @@ router.get('/', async function(req, res, next) {
   })
 });
 
+/* POST liked image */
 router.post('/', async (req, res) => {
   const {name} = req.body;
   const user_id = req.session.user_id;  
   console.log("this is the name value", name);
   const user = new likesModel(null, name, user_id);
+  if (user_id != null) {
   user.save();
   res.redirect('/');
+  } else {
+    res.redirect('/users/signup')
+  }
 });
 
 module.exports = router;
