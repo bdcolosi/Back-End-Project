@@ -1,6 +1,7 @@
 <div class="columns">
     <div class="column"></div>
     <div class="column is-four-fifths has-background-primary">
+
         <div class="grid" data-colcade="columns: .grid-col, items: .grid-item">
             <div class="grid-col grid-col--1"></div>
             <div class="grid-col grid-col--2"></div>
@@ -13,20 +14,23 @@
                             <button id="open" onclick="window.location.href = '/images/${images.id}';" class="button is-primary is-inverted has-text-primary">
                             Open Image
                             </button>
-                            <button id="like" onclick="" class="button is-primary is-inverted">
+                          
+                        <form action="/" method="post">   
+                            <input type="hidden" name="name" value="${images.picture}">        
+                            <button id="like" type="submit" class="button is-primary is-inverted">
                             Like
                             </button>
+                        </form>
+                          
                             <button id="uploader" onclick="" class="button is-primary is-inverted">
                             Uploader
                             </button>
                         </div>
-                    </div>
-            `}).join('')}
+                    </div> `}).join('')}
             
         </div>
     </div>
     <div class="column"></div>
+
 </div>
-
-
 
