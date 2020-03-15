@@ -10,7 +10,7 @@ a {
 .partialWrapper {
   margin: 20px 10px 10px 10px;
   display: grid;
-  grid-template-rows: 300px 100px 600px;
+  grid-template-rows: 300px 100px 0px;
   grid-template-columns: 1fr 1fr;
   /* border: 1px blue solid; */
 }
@@ -31,7 +31,6 @@ a {
 
 #profilePicArea {
 align-content: center;
-/* border: red 1px solid; */
 }
 
 .profilePic {
