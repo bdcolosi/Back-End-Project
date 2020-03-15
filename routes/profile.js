@@ -12,8 +12,9 @@ router.get('/', async function(req, res, next) {
   const savedData = await likesModel.getPicturesById(user_id);
   const howManyLikes = savedData.length;
   console.log('this is the array length: ', howManyLikes);
+  console.log("this is the user id: ", user_id);
   // console.log(resultData[0].picture);
-  if (resultData[0] != undefined) {
+  if (resultData[0] != undefined && user_id != undefined) {
   res.render('template', {
     locals: {
       title: 'Film Data',
@@ -27,7 +28,7 @@ router.get('/', async function(req, res, next) {
     }
   })
 }
-else {
+else if (resultData[0] == undefined && user_id != undefined) {
   res.render('template', {
     locals: {
       title: 'Film Data',
@@ -39,8 +40,12 @@ else {
     }
 
   })
+} else {
+  res.redirect('/users/signup');
 }
 });
+
+
 
 router.post("/", async function(req, res){
   if(req.files) {
