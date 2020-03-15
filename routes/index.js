@@ -6,9 +6,11 @@ likesModel = require('../models/likesModel');
 /* GET home page. */
 router.get('/', async function(req, res, next) {
   const resultData = await imageModel.getAllPictures();
+  console.log(req.session.name);
   res.render('template', {
     locals: {
       title: 'Film Data',
+      user: req.session.user_id,
       resultData: resultData,
       is_logged_in: req.session.is_logged_in,
       name: req.session.name
