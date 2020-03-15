@@ -45,6 +45,7 @@ align-content: center;
 .photoTable {
   margin: 10px 30px 30px 30px;
   grid-column: 1 / span 2;
+  height: 2000px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 7px;

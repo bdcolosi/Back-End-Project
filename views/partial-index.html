@@ -8,9 +8,13 @@
             <button onclick="window.location.href = '/images/${images.id}';" class="button is-primary is-inverted has-text-primary">
                 Open Image
             </button>
-            <button onclick="" class="button is-primary is-inverted">
+            <form action="/" method="post">   
+                <input type="hidden" name="name" value="${images.picture}">        
+                <button type="submit" class="button is-primary is-inverted">
                 Like
-            </button>
+                </button>
+            </form>
+ 
             <button onclick="" class="button is-primary is-inverted">
                 Uploader
             </button></div>

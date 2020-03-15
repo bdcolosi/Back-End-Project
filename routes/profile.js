@@ -1,6 +1,7 @@
 const express = require('express'),
 router = express.Router(),
 imageModel = require('../models/imageModel');
+likesModel = require('../models/likesModel');
 
 
 
@@ -8,8 +9,9 @@ imageModel = require('../models/imageModel');
 router.get('/', async function(req, res, next) {
   const user_id = req.session.user_id;
   const resultData = await imageModel.getProfilePicture(user_id);
-  const savedData = await imageModel.getSavedPicture();
-  // console.log(user_id);
+  const savedData = await likesModel.getPicturesById(user_id);
+  const howManyLikes = savedData.length;
+  console.log('this is the array length: ', howManyLikes);
   // console.log(resultData[0].picture);
   if (resultData[0] != undefined) {
   res.render('template', {
@@ -54,7 +56,7 @@ router.post("/", async function(req, res){
           if(err) {
               console.log(err)
               res.send("error occured")   
-            
+              res.redirect('/profile')            
           }      
           else { 
             res.redirect('/profile');
