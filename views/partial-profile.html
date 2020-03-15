@@ -11,13 +11,32 @@
       <input type="submit" value="upload"/>
     </form>
   </div>
-  <div class="title">
-    <h1>${name}'s Top 5 Images</h1>
+<div class="title">
+  <h1>${name}'s Top Images</h1>
+</div>
+</div>
+<div class="columns">
+  <div class="column"></div>
+  <div class="column is-four-fifths">
+
+      <div class="grid" data-colcade="columns: .grid-col, items: .grid-item">
+          <div class="grid-col grid-col--1"></div>
+          <div class="grid-col grid-col--2"></div>
+          <div class="grid-col grid-col--3"></div>
+          <div class="grid-col grid-col--4"></div>
+          ${savedData.map (liked_images => {
+          return `<div class="grid-item">
+                      <img class="pinterest" src=${liked_images.name}>
+
+                  </div>
+                  <div class="overlay">
+                    <button id="unlike" onlick="" class="button is-danger is-inverted has-text-danger">Unlike</button>
+                  </div>
+                  `}).join('')}
+          
+      </div>
   </div>
-<div class="photoTable">
-    ${savedData.map (liked_images => {
-      return ` <img src="${liked_images.name}" class="top5">`}).join('')}
-  </div>
+  <div class="column"></div>
 </div>
 
 
