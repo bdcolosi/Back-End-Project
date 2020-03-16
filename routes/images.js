@@ -36,13 +36,15 @@ router.get("/:picture_id", async function(req, res, next) {
   });
 });
 
-router.post("/", async (req, res) => {
+router.post("/comment", async (req, res) => {
   const { user_id, picture_id, comment } = req.body;
   const postData = new commentsModel(null, user_id, picture_id, comment, null)
     postData.addComment().then(() => {
-      res.redirect('/images/${image.id}')
+      res.redirect('/images')
     });
     res.redirect('/')
 });
+
+module.exports = router;
 
 

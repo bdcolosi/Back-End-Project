@@ -1,12 +1,11 @@
 const db = require('./conn')
 
 class commentsModel{
-    constructor(id, user_id, picture_id, comment, likes) {
+    constructor(id, user_id, picture_id, comment) {
       this.id = id;
       this.user_id = user_id;
       this.picture_id = picture_id;
       this.comment = comment;
-      this.likes = likes;
     }
 static async getCommentsByImageId(picture_id) {
     try {

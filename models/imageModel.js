@@ -7,7 +7,7 @@ class PictureReviewModel{
     this.picture = picture;
     this.user_id = user_id;
   }
-  static async pushImg(url) {
+ static async pushImg(url) {
     try {
         const response = await db.one('INSERT INTO images (picture) VALUES ($1) RETURNING id;', [url]);
 return response
