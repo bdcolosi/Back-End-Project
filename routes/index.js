@@ -6,7 +6,7 @@ likesModel = require('../models/likesModel');
 /* GET home page. */
 router.get('/', async function(req, res, next) {
   const resultData = await imageModel.getAllPictures();
-  const user_id = req.session.user_id;
+  const user_id = req.session.user_id; 
   const profileData = await imageModel.getProfilePicture(user_id);
   console.log(req.session.name);
   res.render('template', {
