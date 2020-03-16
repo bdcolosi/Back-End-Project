@@ -7,6 +7,25 @@ class PictureReviewModel{
     this.picture = picture;
     this.user_id = user_id;
   }
+ static async pushImg() {
+    try {
+        const response = await db.one('INSERT INTO images (picture) VALUES ($1) RETURNING id;', [this.picture]);
+return response
+    } catch (error) {
+        console.error('ERROR', error);
+        return error
+    }
+}
+
+static async pushImg2() {
+  try {
+      const response = await db.one('INSERT INTO images2 (picture) VALUES ($1) RETURNING id;', [this.picture]);
+return response
+  } catch (error) {
+      console.error('ERROR', error);
+      return error
+  }
+}
 
   static async getAllPictures() {
     try {
@@ -27,31 +46,6 @@ class PictureReviewModel{
       return response;
     } catch (error) {
       console.error("ERROR: ", error);
-      return error;
-    }
-  }
-
-  static async getCommentsByImageId(r_id) {
-    try {
-      const response = await db.any(
-        `SELECT * FROM comments WHERE images_id = ${r_id};`
-      );
-      return response;
-    } catch (error) {
-      console.error("ERROR: ", error);
-      return error;
-    }
-  }
-  static async addComment(r_id, comment) {
-    try {
-      const response = await db.one(
-        `INSERT INTO comments (user_id, picture_id, comment) VALUES ($1, $2, $3) RETURNING id`,
-        [r_id, review_title, review_text]
-      );
-
-      return response;
-    } catch (error) {
-      console.log("ERROR: ", error);
       return error;
     }
   }
@@ -88,6 +82,11 @@ class PictureReviewModel{
       console.error("ERROR: ", error);
       return error;
     }
+  }
+
+static async hello1() {
+    const response = await console.log('yooo');
+    return response;
   }
 
 }

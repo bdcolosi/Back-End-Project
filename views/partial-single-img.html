@@ -1,3 +1,29 @@
-<p>
-    <img src="${data[0].picture}">
-</p>
+
+
+<div id="modal2">
+    <div id="modal-content2">
+        <div id="commentc2a">
+            <p>Like This Photo? Leave a comment!</p>
+        </div>
+        <div>
+<div id="singleImg">
+    <div >    
+        <p>
+        <img src="${data[0].picture}"  >
+    
+    </p>
+
+    <form action="/images/comment" method="POST" autocomplete="off">
+        <input type="hidden" name="user_id" value="${data[0].user_id}">
+        <input type='hidden' name='picture_id' value=${data[0].id}>
+        <!-- <label id="myr">My Review<br> -->
+            <input name='comment' placeholder='Enter Review'></textarea>
+        </label><br>
+        <button type='submit'>Save Review</button>
+
+    </form>
+</div>
+
+</div>
+            </div>
+        </div>
