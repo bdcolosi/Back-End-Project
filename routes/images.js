@@ -1,6 +1,7 @@
 const express = require('express'),
 router = express.Router(),
-imageModel = require('../models/imageModel');
+imageModel = require('../models/imageModel'),
+commentsModel = require('../models/commentsModel');
 
 
 /* GET home page. */
@@ -35,18 +36,15 @@ router.get("/:picture_id", async function(req, res, next) {
   });
 });
 
-router.post("/", async (req, res) => {
-  const { name, images_id, comment } = req.body;
-  const idAsInt = parseInt(images_id);
-  const postData = await PictureReviewModel.addComment(
-    name, 
-    idAsInt,
-    images_id,
-    comment
-  );
-  console.log("HELLO!", postData);
-
-  res.sendStatus(200);
+router.post("/comment", async (req, res) => {
+  const { user_id, picture_id, comment } = req.body;
+  const postData = new commentsModel(null, user_id, picture_id, comment, null)
+    postData.addComment().then(() => {
+      res.redirect('/images')
+    });
+    res.redirect('/')
 });
 
 module.exports = router;
+
+
