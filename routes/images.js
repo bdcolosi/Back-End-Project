@@ -7,9 +7,11 @@ commentsModel = require('../models/commentsModel');
 /* GET home page. */
 router.get('/', async function(req, res, next) {
   const resultData = await imageModel.getAllPictures();
+
   res.render('template', {
     locals: {
       title: 'Film Data',
+
       resultData: resultData,
       is_logged_in: is_logged_in
     },
@@ -22,12 +24,16 @@ router.get('/', async function(req, res, next) {
 router.get("/:picture_id", async function(req, res, next) {
   const { picture_id } = req.params;
   console.log(picture_id);
+  const user_id = req.session.user_id;
   const data = await imageModel.getPicturesById(picture_id);
+  const profileData = await imageModel.getProfilePicture(user_id);
 
   res.render("template", {
     locals: {
       title: 'Film Data',
+      user_id: user_id,
       data: data,
+      profileData: profileData,
       name: req.session.name,
       is_logged_in: req.session.is_logged_in
     },
