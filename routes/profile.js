@@ -10,6 +10,7 @@ router.get('/', async function(req, res, next) {
   const user_id = req.session.user_id;
   const resultData = await imageModel.getProfilePicture(user_id);
   const savedData = await likesModel.getPicturesById(user_id);
+  const profileData = await imageModel.getProfilePicture(user_id);
   const howManyLikes = savedData.length;
   // console.log('this is the array length: ', howManyLikes);
   // console.log("this is the user id: ", user_id);
@@ -20,6 +21,7 @@ router.get('/', async function(req, res, next) {
       title: 'Film Data',
       resultData: resultData,
       savedData: savedData,
+      profileData: profileData,
       is_logged_in: req.session.is_logged_in,
       name: req.session.name
     },

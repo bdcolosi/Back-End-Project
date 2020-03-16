@@ -7,15 +7,26 @@ class PictureReviewModel{
     this.picture = picture;
     this.user_id = user_id;
   }
- static async pushImg(url) {
+ static async pushImg() {
     try {
-        const response = await db.one('INSERT INTO images (picture) VALUES ($1) RETURNING id;', [url]);
+        const response = await db.one('INSERT INTO images (picture) VALUES ($1) RETURNING id;', [this.picture]);
 return response
     } catch (error) {
         console.error('ERROR', error);
         return error
     }
 }
+
+static async pushImg2() {
+  try {
+      const response = await db.one('INSERT INTO images2 (picture) VALUES ($1) RETURNING id;', [this.picture]);
+return response
+  } catch (error) {
+      console.error('ERROR', error);
+      return error
+  }
+}
+
   static async getAllPictures() {
     try {
       const response = await db.any(`SELECT * FROM images ORDER BY random();`);
@@ -71,6 +82,11 @@ return response
       console.error("ERROR: ", error);
       return error;
     }
+  }
+
+static async hello1() {
+    const response = await console.log('yooo');
+    return response;
   }
 
 }

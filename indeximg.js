@@ -11,11 +11,3 @@ while (i <= 110) {
     console.log(picture);    
     i++   
 }
-
-
-// let mapData = imageData.map (url => {
-//     imgModel.pushImg(url)
-// });
-
-
-// modules.exports = imgModel;
