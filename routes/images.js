@@ -11,9 +11,8 @@ router.get('/', async function(req, res, next) {
   res.render('template', {
     locals: {
       title: 'Film Data',
-
       resultData: resultData,
-      is_logged_in: is_logged_in
+      is_logged_in: req.session.name 
     },
     partials: {
       partial: 'partial-index'
