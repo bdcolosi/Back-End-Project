@@ -12,4 +12,14 @@
 //     i++   
 // }
 
-
+// 112	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-vanessa-hong-leather-shorts-shirt/	
+// 113	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-susie-lau/	
+// 114	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-beatrice-gutu/	
+// 115	https://www.styledumonde.com/2020/03/paris-fw-2019-street-style-lexi-boling-and-binx-walton/	
+// 116	https://www.styledumonde.com/2020/03/milan-fall-2020-street-style-tamu-mcpherson-2/	
+// 117	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-amina-muaddi/	
+// 118	https://www.styledumonde.com/2020/03/milan-fall-2020-street-style-theresa-hayes-leather-look/	
+// 119	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-gigi-hadid/	
+// 120	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-suzanne-koller/	
+// 121	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-gilda-ambrosio/	
+// 122	https://www.styledumonde.com/2020/03/paris-fw-2020-street-style-thora-valdimarsdottir/	
