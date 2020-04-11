@@ -1,50 +1,32 @@
-#binerest
+binerest
 
-##CONTENTS
-_____________________
+Description:
 
-*Desription 
-*What we used 
-*Team members 
-*Screenshots 
-*Code examples
+This was a back-end development project to demonstrate our full-stack skills. The team consisted of three developers and our goal was to replicate an already exsisting platform to test our understanding of full stack development. 
 
-____________________
-
-##Description:
-
-###This was a back-end development project to demonstrate our full-stack skills. ###The team consisted of three developers and our ###goal was to replicate an ###already exsisting platform to test our understanding of full stack ###development. 
-
-###Many of the features included in this project are similar to Pinterest: user ###login + profile, uploading photos, liking photos ###that save to your profile ###page. The styling of the page is almost identical to the current Pinterest ###layout as well.
+Many of the features included in this project are similar to Pinterest: user login + profile, uploading photos, liking photos that save to your profile page. The styling of the page is almost identical to the current Pinterest layout as well.
 
 ___________________
 
-##What we used:
+What we used:
 
-*Node.js 
-*Javascript
-*HTML 
-*CSS 
-*Postgres
-*Express
+Node.js, Javascript, HTML, CSS, Postgres, Express
 
 __________________
 
-##Team members:
+Team members:
 
-###Alan Jordan, Aaron Smith, and Brooke Colosi 
+Alan Jordan, Aaron Smith, and Brooke Colosi 
 
 _________________
+Screenshots of binterest
 
-
-##Screenshots of binterest
 ![Screenshot of binteret](https://i.imgur.com/Z0T8DKo.jpg)
 
 ![Screenshot of binterest](https://i.imgur.com/oy0QxhS.jpg)
 
 _________________
-
-##Code examples: 
+Code examples: 
 
 
 ![Code Images](https://i.imgur.com/tQHP1Hy.png)
