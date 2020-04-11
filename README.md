@@ -38,18 +38,18 @@ _________________
 
 
 ##Screenshots of binterest
-![Screenshot of binteret](https://imgur.com/Z0T8DKo)
+![Screenshot of binteret](https://i.imgur.com/Z0T8DKo.jpg)
 
-![Screenshot of binterest](https://imgur.com/oy0QxhS)
+![Screenshot of binterest](https://i.imgur.com/oy0QxhS.jpg)
 
 _________________
 
 ##Code examples: 
 
 
-![Code Images](https://imgur.com/tQHP1Hy)
-![Code Images](https://imgur.com/P5hxR41)
-![Code Images](https://imgur.com/8DkRMaR)
-![Code Images](https://imgur.com/lfhGvIq)
-![Code Images](https://imgur.com/mebMUDc)
+![Code Images](https://i.imgur.com/tQHP1Hy.png)
+![Code Images](https://i.imgur.com/P5hxR41.png)
+![Code Images](https://i.imgur.com/8DkRMaR.png)
+![Code Images](https://i.imgur.com/L8WBTVm.png)
+![Code Images](https://i.imgur.com/mebMUDc.png)
 
